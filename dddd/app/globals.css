@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0b132b;
+  --muted-ink: #4b5563;
+  --paper: #ffffff;
+  --paper-warm: #f8fafc;
+  --line: #e2e8f0;
+  --navy-dark: #070d1e;
+  --navy-primary: #110c5b;
+  --navy-rich: #0b132b;
+  --navy-royal: #1e3a8a;
+  --accent: #f59e0b;
+  --accent-strong: #d97706;
+  --accent-soft: #fef3c7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--font-sans), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: -0.025em;
+}
+
+body .font-serif {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+::selection {
+  color: #0b132b;
+  background: #fbbf24;
+}
+
+@layer components {
+  .eyebrow {
+    color: var(--accent-strong);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .editorial-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 0.375rem;
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+    box-shadow: 0 4px 18px rgba(245, 158, 11, 0.32);
+    color: #0b132b;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 0.9375rem 2.25rem;
+    text-transform: uppercase;
+    transition: background 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+  }
+
+  .editorial-button:hover {
+    background: linear-gradient(135deg, #d97706 0%, #ca8a04 100%);
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.42);
+    transform: translateY(-2px);
+  }
+
+  .editorial-section-heading {
+    color: var(--navy-primary);
+    font-family: var(--font-display), Georgia, serif;
+    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.06;
+  }
+}
+
+/* Stately Navy & Royal Blue styling */
+body .bg-blue-950 {
+  background-color: #0b132b !important;
+}
+
+body .bg-blue-900 {
+  background-color: #110c5b !important;
+}
+
+body a.bg-blue-950,
+body button.bg-blue-950 {
+  background-color: #0b132b !important;
+  color: #ffffff !important;
+}
+
+body a.bg-blue-950:hover,
+body button.bg-blue-950:hover {
+  background-color: #110c5b !important;
+}
+
+body a.hover\:bg-blue-900:hover,
+body button.hover\:bg-blue-900:hover {
+  background-color: #110c5b !important;
+}
+
+body .text-blue-950 {
+  color: #0b132b !important;
+}
+
+body .text-blue-900 {
+  color: #110c5b !important;
+}
+
+body .text-blue-100 {
+  color: #dbeafe !important;
+}
+
+body .text-blue-200 {
+  color: #bfdbfe !important;
+}
+
+body .text-blue-300 {
+  color: #93c5fd !important;
+}
+
+body .border-blue-800 {
+  border-color: #1e3a8a !important;
+}
+
+/* Vibrant Amber-Gold Yellow accents */
+body .bg-yellow-500 {
+  background-color: #f59e0b !important;
+}
+
+body .hover\:bg-yellow-400:hover {
+  background-color: #fbbf24 !important;
+}
+
+body .group:hover .group-hover\:bg-yellow-500 {
+  background-color: #f59e0b !important;
+}
+
+body .bg-yellow-500.text-black,
+body .bg-yellow-500.text-blue-950 {
+  color: #0b132b !important;
+}
+
+body .text-yellow-400 {
+  color: #fbbf24 !important;
+}
+
+body .text-yellow-500 {
+  color: #f59e0b !important;
+}
+
+body .text-yellow-600 {
+  color: #d97706 !important;
+}
+
+body .text-yellow-700 {
+  color: #b45309 !important;
+}
+
+body .bg-yellow-100 {
+  background-color: #fef3c7 !important;
+}
+
+body .border-yellow-500 {
+  border-color: #f59e0b !important;
+}
+
+body .hover\:text-yellow-600:hover {
+  color: #d97706 !important;
+}
+
+body .focus\:ring-yellow-500:focus {
+  --tw-ring-color: #f59e0b !important;
+}
+
+body .bg-gray-50,
+body .bg-slate-50 {
+  background-color: var(--paper-warm) !important;
+}
+
+body .border-gray-100,
+body .border-gray-200,
+body .border-slate-100 {
+  border-color: var(--line) !important;
+}
+
+body .text-gray-500,
+body .text-gray-600,
+body .text-gray-700 {
+  color: var(--muted-ink) !important;
+}
+
+/* Rich Navy Blue Gradient with subtle depth */
+body .bg-gradient-to-r.from-blue-950,
+body .bg-gradient-to-r.from-blue-950.via-blue-900,
+body .bg-gradient-to-r.from-blue-950.to-slate-900 {
+  background-image: linear-gradient(135deg, #070d1e 0%, #110c5b 55%, #1e3a8a 100%) !important;
+}
+
+body .bg-gradient-to-b {
+  background-image: linear-gradient(180deg, rgba(11, 19, 43, 0.45) 0%, rgba(7, 13, 30, 0.88) 100%) !important;
+}
+
+@media (max-width: 640px) {
+  .editorial-button {
+    padding: 0.8125rem 1.5rem;
+  }
+}
